@@ -7,7 +7,7 @@ export default defineConfig(() => {
   return {
     // Match the GitHub Pages project path to the repository name after a rename.
     // Keep the current path when building locally outside GitHub Actions.
-    base: `/${process.env.GITHUB_REPOSITORY?.split('/').pop() || 'Chima-Akenzua-'}/`,
+    base: `/${process.env.GITHUB_REPOSITORY?.split('/').pop() || 'Chima'}/`,
     plugins: [react(), tailwindcss()],
     resolve: {
       alias: {
