@@ -5,7 +5,9 @@ import {defineConfig} from 'vite';
 
 export default defineConfig(() => {
   return {
-    base: '/Chima-Akenzua-/',
+    // Match the GitHub Pages project path to the repository name after a rename.
+    // Keep the current path when building locally outside GitHub Actions.
+    base: `/${process.env.GITHUB_REPOSITORY?.split('/').pop() || 'Chima-Akenzua-'}/`,
     plugins: [react(), tailwindcss()],
     resolve: {
       alias: {
